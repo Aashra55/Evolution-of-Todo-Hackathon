@@ -36,11 +36,17 @@ body {
 
 /* Base styles for containers/cards */
 .modern-card {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)); /* Light black gradient */
-  border: none; /* Removed border */
-  box-shadow: none; /* Removed box-shadow */
+  background: transparent;
+  border: none;
+  box-shadow: none;
   border-radius: 16px;
   padding: 2.5rem;
+}
+
+.feature-card-style {
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.7), rgba(15, 15, 15, 0.9)); /* Darker, more visible gradient */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for separation */
+  border-radius: 16px; /* Inherit rounded corners */
 }
 
 .neon-heading {
