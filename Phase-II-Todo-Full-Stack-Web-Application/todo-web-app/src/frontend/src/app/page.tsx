@@ -84,7 +84,7 @@ export default function Home() {
 
         
 
-                                                <div className="grid grid-cols-2 gap-8 mb-16"> {/* Responsive grid with equal height */}
+                                                <div className="grid grid-cols-2 gap-16 mb-16"> {/* Responsive grid with equal height */}
 
         
 
@@ -140,7 +140,7 @@ export default function Home() {
 
         
 
-                                                    <div key={index} className={`m-6 p-8 modern-card flex flex-col items-center justify-center w-64 h-64 md:w-80 md:h-80 hover:scale-105 transition-transform duration-300 ${loaded ? 'animate-fadeIn' : 'opacity-0'}`} style={{ animationDelay: `${0.6 + index * 0.2}s` }}> {/* Removed max-w-xs and mx-auto */}
+                                                    <div key={index} className={`m-4 p-6 feature-card-style flex flex-col items-center justify-center w-64 h-64 md:w-80 md:h-80 hover:scale-105 transition-transform duration-300 ${loaded ? 'animate-fadeIn' : 'opacity-0'}`} style={{ animationDelay: `${0.6 + index * 0.2}s` }}> {/* Removed max-w-xs and mx-auto */}
 
         
 
