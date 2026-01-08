@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #121212; /* Deep charcoal background */
+  --foreground: #f0f0f0; /* Off-white text */
+  
+  /* Modern Neon Pink - slightly desaturated for sophistication */
+  --neon-pink-light: #ff99e6; /* For subtle highlights */
+  --neon-pink: #ff4dff; /* Core vibrant pink */
+  --neon-pink-dark: #cc00cc; /* For deeper shadows */
+  --neon-pink-glow-subtle: rgba(255, 77, 255, 0.2); /* Soft ambient glow */
+  --neon-pink-glow-medium: rgba(255, 77, 255, 0.4); /* Medium intensity glow */
+  --neon-pink-glow-strong: rgba(255, 77, 255, 0.7); /* Intense, focused glow */
+
+  /* Modern Neon Red - slightly desaturated */
+  --neon-red-light: #ff7788;
+  --neon-red: #ff3366;
+  --neon-red-dark: #cc0033;
+  --neon-red-glow-subtle: rgba(255, 51, 102, 0.2);
+  --neon-red-glow-medium: rgba(255, 51, 102, 0.4);
+  --neon-red-glow-strong: rgba(255, 51, 102, 0.7);
+}
+
+body {
+  background: radial-gradient(circle at top left, #2a003f 0%, #0c0c0c 100%); /* Subtle radial gradient */
+  color: var(--foreground);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex; /* Ensure body takes full height and flexes content */
+  flex-direction: column;
+}
+
+/* Base styles for containers/cards */
+.modern-card {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)); /* Light black gradient */
+  border: none; /* Removed border */
+  box-shadow: none; /* Removed box-shadow */
+  border-radius: 16px;
+  padding: 2.5rem;
+}
+
+.neon-heading {
+  color: var(--neon-pink-light);
+  text-shadow: 
+    0 0 5px var(--neon-pink-glow-medium), 
+    0 0 15px var(--neon-pink-glow-strong);
+  letter-spacing: 0.05em; /* A touch of letter spacing */
+}
+
+.neon-button {
+  background: linear-gradient(135deg, var(--neon-pink-light) 0%, var(--neon-pink) 100%);
+  color: var(--background); /* Dark text on bright button */
+  font-weight: 600;
+  border: none;
+  border-radius: 16px; /* Increased rounded corners */
+  padding: 10px 20px; /* Force smaller padding */
+  box-shadow: 
+    0 0 10px var(--neon-pink-glow-medium), 
+    0 0 25px var(--neon-pink-glow-strong);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Slightly more gap */
+  cursor: pointer;
+  text-transform: uppercase; /* Modern touch */
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+}
+
+.neon-button:hover {
+  background: linear-gradient(135deg, var(--neon-pink) 0%, var(--neon-pink-light) 100%);
+  box-shadow: 
+    0 0 15px var(--neon-pink-glow-strong), 
+    0 0 35px var(--neon-pink-glow-strong);
+  transform: translateY(-3px) scale(1.02); /* More dynamic lift and scale */
+}
+
+.neon-button-red {
+  background: linear-gradient(135deg, var(--neon-red-light) 0%, var(--neon-red) 100%);
+  color: var(--background);
+  font-weight: 600;
+  border: none;
+  border-radius: 16px; /* Increased rounded corners */
+  padding: 10px 20px; /* Force smaller padding */
+  box-shadow: 
+    0 0 10px var(--neon-red-glow-medium), 
+    0 0 25px var(--neon-red-glow-strong);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+}
+
+.neon-button-red:hover {
+  background: linear-gradient(135deg, var(--neon-red) 0%, var(--neon-red-light) 100%);
+  box-shadow: 
+    0 0 15px var(--neon-red-glow-strong), 
+    0 0 35px var(--neon-red-glow-strong);
+  transform: translateY(-3px) scale(1.02);
+}
+
+.input-field-modern {
+  background-color: rgba(255, 255, 255, 0.05); /* Very subtle transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Slightly more visible border */
+  color: var(--foreground);
+  padding: 14px 20px; /* More padding */
+  border-radius: 10px; /* Slightly less rounded than buttons */
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+}
+
+.input-field-modern:focus {
+  outline: none;
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 0 3px var(--neon-pink-glow-medium); /* Deeper, more noticeable glow */
+}
+
+.input-field-modern::placeholder {
+  color: rgba(255, 255, 255, 0.4); /* Softer placeholder */
+}
+
+/* Custom Neon Checkbox */
+.neon-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neon-checkbox:checked {
+  background-color: var(--neon-pink);
+  border-color: var(--neon-pink);
+}
+
+.neon-checkbox:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--neon-pink-glow-medium);
+}
+
+.neon-checkbox::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 14px;
+  border-right: 2px solid var(--background);
+  border-bottom: 2px solid var(--background);
+  transform: rotate(45deg) scale(0);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.neon-checkbox:checked::before {
+  opacity: 1;
+  transform: rotate(45deg) scale(1);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 10px var(--neon-pink-glow-subtle), 0 0 20px var(--neon-pink-glow-medium); }
+  50% { box-shadow: 0 0 15px var(--neon-pink-glow-medium), 0 0 30px var(--neon-pink-glow-strong); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-pulseGlow {
+  animation: pulseGlow 4s infinite alternate;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Force 2-column grid for md screens and above, as a debugging step */
+@media (min-width: 768px) {
+  .force-md-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
