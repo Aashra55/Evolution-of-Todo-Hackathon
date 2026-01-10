@@ -23,7 +23,7 @@ tests:
 
 ## Prompt
 
-main homepage jo h us main feature cards h, wo is tarha set h k ek row main ek card h or sare cards apne neeche waly card ko direct touch kr rahe h is issue ko ese resolve karo k ek row main 2 cards ho or total 2 rows ho or sary cards ki height or width same ho, bs ye kam kardo baqi colors or borders waghera ko mat chedna, go
+In the main homepage the feature cards are set in a way that all the cards are directly touching their belowed card, resolve that issue in a way that one row contains 2 cards and total 2 rows should be made, height and width should be same of all the cards, do not meddle into anything else
 
 ## Response snapshot
 

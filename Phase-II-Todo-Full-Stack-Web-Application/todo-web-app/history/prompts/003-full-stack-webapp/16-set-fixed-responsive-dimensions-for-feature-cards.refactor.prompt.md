@@ -23,7 +23,7 @@ tests:
 
 ## Prompt
 
-cards ki css main se item-stretch ko hata k koi fix width or height dedo, desktop k liye desktop k hisab se or small screen k liye small screen k hisab se
+remove item-stretch from the css of feature cards and give a fixed width and height to the cards; responsive across all the screen sizes
 
 ## Response snapshot
 

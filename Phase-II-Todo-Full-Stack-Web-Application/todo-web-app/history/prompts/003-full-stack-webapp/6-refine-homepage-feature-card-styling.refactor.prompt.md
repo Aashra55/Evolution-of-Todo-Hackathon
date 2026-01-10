@@ -23,7 +23,7 @@ tests:
 
 ## Prompt
 
-remove border, and give some border radius to cards
+remove border, and give some border radius to feature cards of homepage
 
 ## Response snapshot
 

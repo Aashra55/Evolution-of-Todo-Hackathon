@@ -36,9 +36,17 @@ body {
 
 /* Base styles for containers/cards */
 .modern-card {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)); /* Light black gradient */
+  background: transparent;
   border: none; /* Removed border */
   box-shadow: none; /* Removed box-shadow */
+  border-radius: 16px;
+  padding: 2.5rem;
+}
+
+.feature-card-style {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)); /* Darker semi-transparent gradient */
+  border: none;
+  box-shadow: none;
   border-radius: 16px;
   padding: 2.5rem;
 }
@@ -214,4 +222,3 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
-

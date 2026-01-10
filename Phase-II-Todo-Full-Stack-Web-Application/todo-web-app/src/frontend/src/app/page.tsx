@@ -28,7 +28,7 @@ export default function Home() {
 
       {/* Main Content Card - Frosted Glass Effect */}
 
-      <div className={`relative z-10 text-center max-w-5xl w-full modern-card p-12 transition-all duration-1000 ${loaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`} >
+      <div className={`relative z-10 max-w-5xl w-full modern-card p-12 transition-all duration-1000 flex flex-col items-center ${loaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`} >
 
         
 
@@ -36,7 +36,7 @@ export default function Home() {
 
         
 
-                <div className="mb-16">
+                <div className="mb-16 text-center">
 
         
 
@@ -84,7 +84,7 @@ export default function Home() {
 
         
 
-                                                <div className="grid grid-cols-2 gap-8 mb-16"> {/* Responsive grid with equal height */}
+                                                <div className="grid grid-cols-2 gap-16 mb-16 mx-auto">
 
         
 
@@ -92,7 +92,7 @@ export default function Home() {
 
         
 
-                                                  {[
+                                                                                                    {[
 
         
 
@@ -100,7 +100,7 @@ export default function Home() {
 
         
 
-                                                    { icon: FaRocket, title: "Intuitive Design", description: "Effortlessly manage tasks with a clean, user-friendly interface." },
+                                                          
 
         
 
@@ -108,7 +108,7 @@ export default function Home() {
 
         
 
-                                                    { icon: FaTasks, title: "Powerful Features", description: "Track progress, set priorities, and collaborate with ease." },
+                                                          
 
         
 
@@ -116,7 +116,7 @@ export default function Home() {
 
         
 
-                                                    { icon: FaShieldAlt, title: "Secure & Reliable", description: "Your data is safe with robust authentication and privacy." },
+                                                          
 
         
 
@@ -124,7 +124,7 @@ export default function Home() {
 
         
 
-                                                    { icon: FaSyncAlt, title: "Cross-Device Sync", description: "Access your tasks seamlessly across all your devices, anytime, anywhere." } // Added new feature
+                                                                                                      { icon: FaRocket, title: "Intuitive Design", description: "Effortlessly manage tasks with a clean, user-friendly interface." },
 
         
 
@@ -132,7 +132,7 @@ export default function Home() {
 
         
 
-                                                  ].map((feature, index) => (
+                                                          
 
         
 
@@ -140,7 +140,7 @@ export default function Home() {
 
         
 
-                                                    <div key={index} className={`m-6 p-8 modern-card flex flex-col items-center justify-center w-64 h-64 md:w-80 md:h-80 hover:scale-105 transition-transform duration-300 ${loaded ? 'animate-fadeIn' : 'opacity-0'}`} style={{ animationDelay: `${0.6 + index * 0.2}s` }}> {/* Removed max-w-xs and mx-auto */}
+                                                          
 
         
 
@@ -148,7 +148,7 @@ export default function Home() {
 
         
 
-                                                      <feature.icon className="text-5xl text-neon-pink mb-4 animate-float" />
+                                                          
 
         
 
@@ -156,7 +156,7 @@ export default function Home() {
 
         
 
-                                                      <h3 className="text-2xl font-semibold neon-heading mb-2">{feature.title}</h3>
+                                                                                                      { icon: FaTasks, title: "Powerful Features", description: "Track progress, set priorities, and collaborate with ease." },
 
         
 
@@ -164,7 +164,7 @@ export default function Home() {
 
         
 
-                                                      <p className="text-gray-300 text-sm text-center">{feature.description}</p>
+                                                          
 
         
 
@@ -172,7 +172,7 @@ export default function Home() {
 
         
 
-                                                    </div>
+                                                          
 
         
 
@@ -180,7 +180,271 @@ export default function Home() {
 
         
 
-                                                  ))}
+                                                          
+
+        
+
+        
+
+        
+
+                                                                                                      { icon: FaShieldAlt, title: "Secure & Reliable", description: "Your data is safe with robust authentication and privacy." },
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                                                                      { icon: FaSyncAlt, title: "Cross-Device Sync", description: "Access your tasks seamlessly across all your devices, anytime, anywhere." } // Added new feature
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                                                                                                                                                                        ].map((feature, index) => (
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                                                                                                                                                                          <div key={index} className={`p-8 feature-card-style flex flex-col items-center justify-center w-64 h-64 md:w-80 md:h-80 hover:scale-105 transition-transform duration-300 ${loaded ? 'animate-fadeIn' : 'opacity-0'}`} style={{ animationDelay: `${0.6 + index * 0.2}s` }}>
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                                                                                                                                                                            <feature.icon className="text-5xl text-neon-pink mb-4 animate-float" />
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                                                                                                                                                                            <h3 className="text-2xl font-semibold neon-heading mb-2">{feature.title}</h3>
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                                                                                                                                                                            <p className="text-gray-300 text-sm text-center">{feature.description}</p>
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                                                                                                                                                                          </div>
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                          
+
+        
+
+        
+
+        
+
+                                                                                                                                                                                                        ))}
 
         
 
@@ -206,29 +470,29 @@ export default function Home() {
 
                                                 {/* Call to Action Buttons */}
 
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
+                <div className="text-center">
 
-          <Link href="/signup" passHref>
+                                                          <Link href="/signup" passHref className="block mt-8">
 
-            <button className={`neon-button text-lg group ${loaded ? 'animate-fadeIn' : 'opacity-0'}`} style={{ animationDelay: '1.2s' }}>
+                                                            <button className={`neon-button text-lg group ${loaded ? 'animate-fadeIn' : 'opacity-0'}`} style={{ animationDelay: '1.2s' }}>
 
-              Get Started (Sign Up) <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                                                              Get Started (Sign Up) <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
 
-            </button>
+                                                            </button>
 
-          </Link>
+                                                          </Link>
 
-          <Link href="/signin" passHref>
+                                                          <Link href="/signin" passHref className="block mt-8">
 
-            <button className={`neon-button text-lg group ${loaded ? 'animate-fadeIn' : 'opacity-0'}`} style={{ animationDelay: '1.3s' }}>
+                                                            <button className={`neon-button text-lg group ${loaded ? 'animate-fadeIn' : 'opacity-0'}`} style={{ animationDelay: '1.3s' }}>
 
-              Sign In <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                                                              Sign In <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
 
-            </button>
+                                                            </button>
 
-          </Link>
+                                                          </Link>
 
-        </div>
+                </div>
 
       </div>
 

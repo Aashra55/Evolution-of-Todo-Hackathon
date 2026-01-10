@@ -23,7 +23,7 @@ tests:
 
 ## Prompt
 
-ab ek issue ye h k cards k beech main gap nh h sary cards ko kuch margin do charon taraf taky sare cards k darmyan gap ho
+Give some margin to all the cards to create gap between cards
 
 ## Response snapshot
 
