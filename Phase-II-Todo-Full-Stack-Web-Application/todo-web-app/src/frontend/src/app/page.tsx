@@ -84,7 +84,7 @@ export default function Home() {
 
         
 
-                                                <div className="grid grid-cols-2 gap-16 mb-16 mx-auto">
+                                                <div className="grid grid-cols-2 mb-16 mx-auto">
 
         
 
@@ -284,7 +284,7 @@ export default function Home() {
 
         
 
-                                                                                                                                                                                                          <div key={index} className={`p-8 feature-card-style flex flex-col items-center justify-center w-64 h-64 md:w-80 md:h-80 hover:scale-105 transition-transform duration-300 ${loaded ? 'animate-fadeIn' : 'opacity-0'}`} style={{ animationDelay: `${0.6 + index * 0.2}s` }}>
+                                                                                                                                                                                                          <div key={index} className={`m-4 p-8 feature-card-style flex flex-col items-center justify-center w-64 h-64 md:w-80 md:h-80 hover:scale-105 transition-transform duration-300 ${loaded ? 'animate-fadeIn' : 'opacity-0'}`} style={{ animationDelay: `0.6s` }}>
 
         
 
@@ -472,7 +472,7 @@ export default function Home() {
 
                 <div className="text-center">
 
-                                                          <Link href="/signup" passHref className="block mt-8">
+                                                          <Link href="/signup" passHref style={{ display: 'block', marginTop: '2rem' }}>
 
                                                             <button className={`neon-button text-lg group ${loaded ? 'animate-fadeIn' : 'opacity-0'}`} style={{ animationDelay: '1.2s' }}>
 
@@ -482,7 +482,7 @@ export default function Home() {
 
                                                           </Link>
 
-                                                          <Link href="/signin" passHref className="block mt-8">
+                                                          <Link href="/signin" passHref style={{ display: 'block', marginTop: '2rem' }}>
 
                                                             <button className={`neon-button text-lg group ${loaded ? 'animate-fadeIn' : 'opacity-0'}`} style={{ animationDelay: '1.3s' }}>
 

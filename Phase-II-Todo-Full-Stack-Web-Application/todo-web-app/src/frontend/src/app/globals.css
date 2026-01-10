@@ -49,6 +49,7 @@ body {
   box-shadow: none;
   border-radius: 16px;
   padding: 2.5rem;
+  margin: 1rem; /* Added margin for spacing */
 }
 
 .neon-heading {
