@@ -34,6 +34,50 @@ body {
   flex-direction: column;
 }
 
+.header-modern {
+  background: linear-gradient(90deg, #1a001a, #330033);
+}
+
+.btn-primary {
+  border: 1px solid var(--neon-pink);
+  color: var(--neon-pink);
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--neon-pink);
+  color: #1a001a;
+}
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--neon-pink-light);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--neon-pink);
+  box-shadow: 0 0 8px var(--neon-pink-glow-medium);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
 /* Base styles for containers/cards */
 .modern-card {
   background: transparent;
