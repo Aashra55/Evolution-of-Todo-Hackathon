@@ -23,7 +23,7 @@ tests:
 
 ## Prompt
 
-remove item-stretch from the css of feature cards and give a fixed width and height to the cards; responsive across all the screen sizes
+remove item-stretch from the css of feature cards and give a fixed width and height to the cards, cards should be responsive across all the screen sizes
 
 ## Response snapshot
 

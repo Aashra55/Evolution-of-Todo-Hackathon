@@ -23,7 +23,7 @@ tests:
 
 ## Prompt
 
-gap thoda badha do
+increase the gap between feature cards
 
 ## Response snapshot
 

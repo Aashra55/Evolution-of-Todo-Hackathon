@@ -24,7 +24,7 @@ tests:
 
 ## Prompt
 
-please decrease the padding of cards by 90 percent and give margin to cards instead of padding
+decrease the padding of cards by 90 percent and give margin to cards instead of padding
 
 ## Response snapshot
 

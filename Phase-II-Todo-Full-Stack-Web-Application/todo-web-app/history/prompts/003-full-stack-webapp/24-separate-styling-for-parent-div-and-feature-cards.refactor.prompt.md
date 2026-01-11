@@ -8,7 +8,7 @@ model: gemini-cli
 feature: 003-full-stack-webapp
 branch: main
 user: Me
-command: ek issue h k feature cards or un k parent div; donon k pas ek hi css class .modern-card jis ki waja se jab tmne feature cards ko background dia to wo parent div ko bhi mil gaya jab k parent div ko background nh dena ytransparent rakhna hai, to please is issue ko resolve kro
+command: There is a issue that feature cards and their parent div both have same css class .modern-card from that cause when you give the background to cards it is also achieved by parent div where as we don't wanna give background to parent div and keep it transparent, resolve this issue
 labels: ["refactor", "css", "separation of concerns"]
 links:
   spec: null
@@ -24,7 +24,7 @@ tests:
 
 ## Prompt
 
-ek issue h k feature cards or un k parent div; donon k pas ek hi css class .modern-card jis ki waja se jab tmne feature cards ko background dia to wo parent div ko bhi mil gaya jab k parent div ko background nh dena ytransparent rakhna hai, to please is issue ko resolve kro
+There is a issue that feature cards and their parent div both have same css class .modern-card from that cause when you give the background to cards it is also achieved by parent div where as we don't wanna give background to parent div and keep it transparent, resolve this issue
 
 ## Response snapshot
 

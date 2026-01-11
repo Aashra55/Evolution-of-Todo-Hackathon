@@ -24,7 +24,7 @@ tests:
 
 ## Prompt
 
-cards ko loght black gradient ka background do or cards k between gap blkul bhi show nh horaha h sary cards ek dusre se mily huye h gap ko adjust karo but layout change nahi karnacards ko light black gradient ka background do or cards k between gap blkul bhi show nh horaha h sary cards ek dusre se mily huye h gap ko adjust karo
+Give light black gradient to the cards and there is no gap between cards, all the cards are touching each other, adjust the gap but don't change the layout
 
 ## Response snapshot
 

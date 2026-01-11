@@ -23,7 +23,7 @@ tests:
 
 ## Prompt
 
-cards k parent div ka background transparent kar do
+Transparent the background of the parent div of cards
 
 ## Response snapshot
 

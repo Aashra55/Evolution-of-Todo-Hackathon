@@ -8,7 +8,7 @@ model: gemini-cli
 feature: 003-full-stack-webapp
 branch: main
 user: Me
-command: dude features cards k pas 0 margin or 0 padding h mene abhi check kia h, feature cards ko kuch padding do or kuch margin bhi do okay
+command: features cards k pas 0 margin or 0 padding h mene abhi check kia h, feature cards ko kuch padding do or kuch margin bhi do 
 labels: ["refactor", "css", "padding", "margin", "visibility"]
 links:
   spec: null
@@ -23,7 +23,7 @@ tests:
 
 ## Prompt
 
-dude features cards k pas 0 margin or 0 padding h mene abhi check kia h, feature cards ko kuch padding do or kuch margin bhi do okay
+features cards k pas 0 margin or 0 padding h mene abhi check kia h, feature cards ko kuch padding do or kuch margin bhi do
 
 ## Response snapshot
 

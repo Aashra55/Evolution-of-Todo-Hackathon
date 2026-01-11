@@ -35,35 +35,79 @@ body {
 }
 
 .header-modern {
-  background: linear-gradient(90deg, #1a001a, #330033);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.header-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--neon-pink), transparent);
+  opacity: 0.7;
+}
+
+.app-title {
+  color: var(--neon-pink-light);
+  text-shadow: 0 0 8px var(--neon-pink-glow-medium), 0 0 20px var(--neon-pink-glow-strong);
+  letter-spacing: 0.05em;
 }
 
 .btn-primary {
-  border: 1px solid var(--neon-pink);
-  color: var(--neon-pink);
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  background: var(--neon-pink);
+  color: var(--background);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
   transition: all 0.3s ease;
+  border: 1px solid var(--neon-pink);
+  box-shadow: 0 0 15px var(--neon-pink-glow-medium);
 }
 
 .btn-primary:hover {
-  background-color: var(--neon-pink);
-  color: #1a001a;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 30px var(--neon-pink-glow-strong);
 }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--foreground);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--neon-pink);
+}
+
 .nav-link {
+  background-color: transparent;
   position: relative;
   transition: color 0.3s ease;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  padding-bottom: 8px;
 }
 
 .nav-link:hover {
-  color: var(--neon-pink-light);
+  color: var(--foreground);
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -4px;
+  bottom: 0;
   left: 0;
   right: 0;
   height: 2px;
@@ -266,4 +310,153 @@ body {
   .force-md-grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
+}
+
+/* --- Premium Header Design --- */
+
+.header-premium {
+  background: #0A0A0A;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 0;
+}
+
+.app-logo-premium .icon {
+  color: var(--neon-pink);
+  filter: drop-shadow(0 0 4px var(--neon-pink-glow-medium));
+}
+
+.app-logo-premium .text {
+  color: #EAEAEA;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.nav-link-premium {
+  color: #888888;
+  font-weight: 500;
+  padding-bottom: 4px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link-premium:hover {
+  color: #FFFFFF;
+}
+
+.nav-link-premium::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 2px;
+  background-color: var(--neon-pink);
+  border-radius: 2px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 3px var(--neon-pink-glow-medium));
+}
+
+.nav-link-premium:hover::after {
+  opacity: 1;
+}
+
+.btn-primary-premium {
+  background: transparent;
+  color: var(--neon-pink);
+  font-weight: 500;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--neon-pink);
+  box-shadow: inset 0 0 5px var(--neon-pink-glow-subtle);
+}
+
+.btn-primary-premium:hover {
+  background: var(--neon-pink-glow-subtle);
+  color: white;
+  box-shadow: inset 0 0 8px var(--neon-pink-glow-medium), 0 0 10px var(--neon-pink-glow-subtle);
+}
+
+.btn-secondary-premium {
+  background: transparent;
+  color: #A0A0A0;
+  font-weight: 500;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.btn-secondary-premium:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* --- SaaS Header Design --- */
+
+.header-saas {
+  background: rgba(16, 16, 16, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.5rem;
+  position: fixed; /* Changed from sticky to fixed */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50; /* Ensure it stays on top of other content */
+  box-sizing: border-box; /* Fix for overflow issue */
+}
+
+.header-saas a {
+  text-decoration: none; /* Globally remove underline from links in this header */
+}
+
+.app-logo-saas .icon {
+  color: var(--neon-pink);
+}
+
+.app-logo-saas .text {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.nav-link-saas {
+  color: #A0A0A0;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link-saas:hover {
+  color: #FFFFFF;
+}
+
+.btn-primary-saas {
+  background: var(--neon-pink);
+  color: #0A0A0A;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--neon-pink);
+}
+
+.btn-primary-saas:hover {
+  filter: brightness(1.1);
+}
+
+.btn-secondary-saas {
+  background: transparent;
+  color: #A0A0A0;
+  font-weight: 500;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary-saas:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
 }

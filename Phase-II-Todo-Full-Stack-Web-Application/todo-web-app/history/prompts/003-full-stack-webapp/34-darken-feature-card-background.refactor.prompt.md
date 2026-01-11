@@ -8,7 +8,7 @@ model: gemini-cli
 feature: 003-full-stack-webapp
 branch: main
 user: Me
-command: please darkened the background of feature cards
+command: please darken the background of feature cards
 labels: ["refactor", "css", "background", "darken"]
 links:
   spec: null
@@ -23,7 +23,7 @@ tests:
 
 ## Prompt
 
-please darkened the background of feature cards
+please darken the background of feature cards
 
 ## Response snapshot
 

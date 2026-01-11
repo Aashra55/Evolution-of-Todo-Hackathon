@@ -23,7 +23,7 @@ tests:
 
 ## Prompt
 
-cards ka background bht light h pata hi nh chal raha thora dark karo taky pata tp chalye k background main koi color h, abhi to almost transparent lag raha h background
+Background of the cards is very light almost invisible, darken the background so that the background color would be visible, current condition of background is almost transparent
 
 ## Response snapshot
 

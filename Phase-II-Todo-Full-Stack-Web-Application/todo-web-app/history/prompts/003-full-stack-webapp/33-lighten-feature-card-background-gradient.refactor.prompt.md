@@ -8,7 +8,7 @@ model: gemini-cli
 feature: 003-full-stack-webapp
 branch: main
 user: Me
-command: increase the opacityincrease the opacity of feature cards
+command: increase the opacity of feature cards
 labels: ["refactor", "css", "background", "gradient"]
 links:
   spec: null
@@ -23,7 +23,7 @@ tests:
 
 ## Prompt
 
-increase the opacityincrease the opacity of feature cards
+increase the opacity of feature cards
 
 ## Response snapshot
 

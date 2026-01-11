@@ -8,7 +8,7 @@ model: gemini-cli
 feature: 003-full-stack-webapp
 branch: main
 user: Me
-command: okay you done greate but please remove this red borderokay you done great but please remove this red border
+command: okay you done great but please remove this red borderokay you done great but please remove this red border
 labels: ["refactor", "css", "clean-up", "spacing"]
 links:
   spec: null
@@ -23,7 +23,7 @@ tests:
 
 ## Prompt
 
-okay you done greate but please remove this red borderokay you done great but please remove this red border
+okay you done great but please remove this red borderokay you done great but please remove this red border
 
 ## Response snapshot
 

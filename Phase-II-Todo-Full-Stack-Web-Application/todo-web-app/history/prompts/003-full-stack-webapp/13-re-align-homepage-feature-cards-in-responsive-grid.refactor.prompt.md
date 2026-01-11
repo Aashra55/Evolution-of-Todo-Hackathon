@@ -8,7 +8,7 @@ model: gemini
 feature: 003-full-stack-webapp
 branch: 003-full-stack-webapp
 user: Me
-command: |-
+command: 
   Align the feature cards in a clean responsive grid.
   Desktop: 2 cards per row (2x2 layout).
   Mobile: 1 card per row.

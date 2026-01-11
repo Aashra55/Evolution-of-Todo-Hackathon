@@ -40,7 +40,7 @@ export default function Home() {
 
         
 
-                  <h1 className={`text-6xl sm:text-7xl lg:text-8xl font-extrabold neon-heading mb-6 leading-tight animate-fadeIn ${loaded ? '' : 'opacity-0'}`}>
+                  <h1 className={`text-6xl sm:text-7xl lg:text-8xl font-extrabold neon-heading mb-6 leading-tight animate-fadeIn mt-10 ${loaded ? '' : 'opacity-0'}`}>
 
         
 

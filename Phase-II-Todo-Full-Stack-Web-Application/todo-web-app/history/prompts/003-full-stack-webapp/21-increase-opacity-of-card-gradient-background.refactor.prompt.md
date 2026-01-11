@@ -23,7 +23,7 @@ tests:
 
 ## Prompt
 
-still to light please increase the opacity of color
+still too light please increase the opacity of background color
 
 ## Response snapshot
 
