@@ -401,13 +401,15 @@ body {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem 1.5rem;
+  padding: 1rem 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
   position: fixed; /* Changed from sticky to fixed */
   width: 100%;
   top: 0;
   left: 0;
   z-index: 50; /* Ensure it stays on top of other content */
-  box-sizing: border-box; /* Fix for overflow issue */
+  box-sizing: border-box;
 }
 
 .header-saas a {
@@ -441,6 +443,8 @@ body {
   border-radius: 8px;
   transition: all 0.3s ease;
   border: 1px solid var(--neon-pink);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .btn-primary-saas:hover {
@@ -454,6 +458,8 @@ body {
   padding: 0.6rem 1.25rem;
   border-radius: 8px;
   transition: all 0.3s ease;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .btn-secondary-saas:hover {
