@@ -466,3 +466,149 @@ body {
   color: #FFFFFF;
   background: rgba(255, 255, 255, 0.1);
 }
+
+.mobile-menu {
+  position: fixed;
+  top: 70px; /* Height of the header */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 40; /* Below the header but above other content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+/* Force-hide mobile toggle on large screens */
+
+@media (min-width: 1024px) {
+
+  .mobile-menu-toggle {
+
+    display: none !important;
+
+  }
+
+}
+
+
+
+/* --- Responsive Header Visibility --- */
+
+
+
+/* Default (mobile) styles */
+
+.desktop-nav,
+
+.desktop-actions {
+
+  display: none;
+
+}
+
+
+
+.mobile-menu-toggle {
+
+  display: block;
+
+}
+
+
+
+/* Large screen styles (lg breakpoint: 1024px) */
+
+@media (min-width: 1024px) {
+
+    .desktop-nav {
+
+      display: flex;
+
+      gap: 2rem; /* Explicitly add gap */
+
+    }
+
+  
+
+    .desktop-actions {
+
+      display: flex;
+
+    }
+
+  
+
+        .mobile-menu-toggle {
+
+  
+
+          display: none;
+
+  
+
+        }
+
+  
+
+    }
+
+  
+
+    
+
+  
+
+    /* --- Mobile Menu Specific Styles --- */
+
+  
+
+    .mobile-menu a {
+
+  
+
+      text-decoration: none; /* Ensure no underline for mobile menu links */
+
+  
+
+    }
+
+  
+
+    
+
+  
+
+    .mobile-menu nav .nav-link-saas {
+
+  
+
+      margin-bottom: 1.5rem;
+
+  
+
+    }
+
+  
+
+    
+
+  
+
+    .mobile-menu nav .btn-secondary-saas {
+
+  
+
+      margin-bottom: 1.5rem;
+
+  
+
+    }
+
+  
+
+    
