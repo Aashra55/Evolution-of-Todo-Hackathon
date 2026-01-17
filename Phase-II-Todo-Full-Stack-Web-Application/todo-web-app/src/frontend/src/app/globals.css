@@ -603,7 +603,15 @@ body {
 
   
 
+    
+
+  
+
       margin-bottom: 1.5rem;
+
+  
+
+    
 
   
 
@@ -612,3 +620,29 @@ body {
   
 
     
+
+  
+
+    
+
+  
+
+    
+
+  
+
+    /* --- Hamburger Icon Styles --- */
+.hamburger-icon-themed {
+  background: transparent;
+  border: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  color: var(--neon-pink);
+  transition: all 0.3s ease;
+  z-index: 10; /* Ensure it's above other elements if needed */
+}
+
+.hamburger-icon-themed:hover {
+  filter: brightness(1.2);
+}

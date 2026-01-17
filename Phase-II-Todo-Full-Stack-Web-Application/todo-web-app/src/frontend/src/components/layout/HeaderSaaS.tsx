@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { FaTasks, FaBars, FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
+import { FiMenu, FiX } from 'react-icons/fi';
+import { FaTasks } from 'react-icons/fa';
 
 const HeaderSaaS = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -45,9 +46,10 @@ const HeaderSaaS = () => {
             <div className="mobile-menu-toggle">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-white focus:outline-none"
+                className="hamburger-icon-themed focus:outline-none"
+                aria-label="Toggle menu"
               >
-                {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                {isMobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
               </button>
             </div>
           </div>
@@ -57,21 +59,20 @@ const HeaderSaaS = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="mobile-menu">
-          <nav className="flex flex-col items-center gap-8 py-8">
-            <Link href="/" passHref>
+          <nav style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', paddingTop: '2rem' }}>
+            <Link href="/" passHref style={{ display: 'block', marginBottom: '1.5rem', textDecoration: 'none' }}>
               <span className="nav-link-saas text-xl" onClick={() => setIsMobileMenuOpen(false)}>Home</span>
             </Link>
-            <Link href="/dashboard" passHref>
+            <Link href="/dashboard" passHref style={{ display: 'block', marginBottom: '1.5rem', textDecoration: 'none' }}>
               <span className="nav-link-saas text-xl" onClick={() => setIsMobileMenuOpen(false)}>Dashboard</span>
             </Link>
-            <div className="flex flex-col items-center gap-6 mt-6">
-                <Link href="/signin" passHref>
-                    <span className="btn-secondary-saas" onClick={() => setIsMobileMenuOpen(false)}>Sign In</span>
-                </Link>
-                <Link href="/signup" passHref>
-                    <span className="btn-primary-saas" onClick={() => setIsMobileMenuOpen(false)}>Sign Up</span>
-                </Link>
-            </div>
+            <div className="border-t border-gray-700 w-3/4 my-4"></div>
+            <Link href="/signin" passHref style={{ display: 'block', margin: '1rem 0', textDecoration: 'none' }}>
+                <span className="btn-secondary-saas" onClick={() => setIsMobileMenuOpen(false)}>Sign In</span>
+            </Link>
+            <Link href="/signup" passHref style={{ display: 'block', margin: '1rem 0', textDecoration: 'none' }}>
+                <span className="btn-primary-saas" onClick={() => setIsMobileMenuOpen(false)}>Sign Up</span>
+            </Link>
           </nav>
         </div>
       )}
