@@ -84,7 +84,7 @@ export default function Home() {
 
         
 
-                                                <div className="grid grid-cols-2 mb-16 mx-auto">
+                                                <div className="grid feature-card-grid mb-16 mx-auto">
 
         
 
