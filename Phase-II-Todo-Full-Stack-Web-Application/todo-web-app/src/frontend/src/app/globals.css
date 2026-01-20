@@ -650,7 +650,6 @@ body {
 /* --- Feature Card Grid Responsive --- */
 .feature-card-grid {
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  outline: 5px solid red !important; /* Debugging style */
 }
 
 @media (min-width: 768px) {
