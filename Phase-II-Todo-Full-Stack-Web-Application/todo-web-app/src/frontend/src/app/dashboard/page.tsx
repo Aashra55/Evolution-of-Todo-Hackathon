@@ -77,7 +77,7 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen">
-      <nav className="bg-gray-900 py-4 px-8 shadow-lg"> {/* Refined navbar background and padding */}
+      <nav className="bg-gray-900 pb-4 px-8 shadow-lg pt-[10vh]"> {/* Refined navbar background and padding */}
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex-shrink-0">
             <h1 className="text-2xl font-bold neon-heading">Dashboard</h1>

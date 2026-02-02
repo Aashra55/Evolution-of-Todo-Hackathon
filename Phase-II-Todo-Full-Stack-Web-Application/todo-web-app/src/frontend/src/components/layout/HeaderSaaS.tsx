@@ -1,12 +1,21 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { FaTasks } from 'react-icons/fa';
 
 const HeaderSaaS = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    // Check for token in localStorage to determine if the user is authenticated
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsAuthenticated(true);
+    }
+  }, []);
 
   return (
     <>
@@ -35,12 +44,20 @@ const HeaderSaaS = () => {
           {/* Right: Actions & Mobile Menu Button */}
           <div className="flex items-center gap-4">
             <div className="desktop-actions items-center gap-4">
-              <Link href="/signin" passHref>
-                <span className="btn-secondary-saas">Sign In</span>
-              </Link>
-              <Link href="/signup" passHref>
-                <span className="btn-primary-saas">Sign Up</span>
-              </Link>
+              {isAuthenticated ? (
+                <Link href="/profile" passHref>
+                  <span className="btn-primary-saas">Profile</span>
+                </Link>
+              ) : (
+                <>
+                  <Link href="/signin" passHref>
+                    <span className="btn-secondary-saas">Sign In</span>
+                  </Link>
+                  <Link href="/signup" passHref>
+                    <span className="btn-primary-saas">Sign Up</span>
+                  </Link>
+                </>
+              )}
             </div>
             {/* Hamburger Menu Button */}
             <div className="mobile-menu-toggle">
@@ -67,12 +84,20 @@ const HeaderSaaS = () => {
               <span className="nav-link-saas text-xl" onClick={() => setIsMobileMenuOpen(false)}>Dashboard</span>
             </Link>
             <div className="border-t border-gray-700 w-3/4 my-4"></div>
-            <Link href="/signin" passHref style={{ display: 'block', margin: '1rem 0', textDecoration: 'none' }}>
-                <span className="btn-secondary-saas" onClick={() => setIsMobileMenuOpen(false)}>Sign In</span>
-            </Link>
-            <Link href="/signup" passHref style={{ display: 'block', margin: '1rem 0', textDecoration: 'none' }}>
-                <span className="btn-primary-saas" onClick={() => setIsMobileMenuOpen(false)}>Sign Up</span>
-            </Link>
+            {isAuthenticated ? (
+              <Link href="/profile" passHref style={{ display: 'block', margin: '1rem 0', textDecoration: 'none' }}>
+                <span className="btn-primary-saas" onClick={() => setIsMobileMenuOpen(false)}>Profile</span>
+              </Link>
+            ) : (
+              <>
+                <Link href="/signin" passHref style={{ display: 'block', margin: '1rem 0', textDecoration: 'none' }}>
+                  <span className="btn-secondary-saas" onClick={() => setIsMobileMenuOpen(false)}>Sign In</span>
+                </Link>
+                <Link href="/signup" passHref style={{ display: 'block', margin: '1rem 0', textDecoration: 'none' }}>
+                  <span className="btn-primary-saas" onClick={() => setIsMobileMenuOpen(false)}>Sign Up</span>
+                </Link>
+              </>
+            )}
           </nav>
         </div>
       )}
