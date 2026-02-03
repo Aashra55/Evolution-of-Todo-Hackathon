@@ -81,10 +81,25 @@ const ProfilePage = () => {
         <div className="flex flex-col md:flex-row">
           {/* Left Column */}
           <div className="w-full md:w-1/3 bg-gray-900/50 p-8 flex flex-col items-center justify-center">
-            <div className="w-32 h-32 bg-neon-pink-glow-medium rounded-full flex items-center justify-center mb-4">
-              <span className="text-7xl font-bold text-gray-200">{user?.name[0].toUpperCase()}</span>
+            <div style={{
+              width: '6rem', 
+              height: '6rem', 
+              borderRadius: '50%', 
+              border: '4px solid var(--neon-pink)', 
+              boxShadow: '0 0 15px var(--neon-pink-glow-strong)',
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              marginBottom: '1rem'
+            }}>
+              <span style={{
+                fontSize: '3.5rem',
+                fontWeight: 'bold',
+                color: 'var(--neon-pink)',
+                textShadow: '0 0 10px var(--neon-pink-glow-medium)'
+              }}>{user?.name[0].toUpperCase()}</span>
             </div>
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">{user?.name}</h2>
+            <h2 className="text-3xl font-light uppercase text-white mb-4 text-center">{user?.name}</h2>
 
           </div>
 
@@ -97,10 +112,7 @@ const ProfilePage = () => {
                   <strong className="text-gray-300">Email</strong>
                   <p className="text-gray-400">{user?.email}</p>
                 </div>
-                <div className="w-1/2">
-                  <strong className="text-gray-300">Phone</strong>
-                  <p className="text-gray-400">{user?.phone}</p>
-                </div>
+
               </div>
             </div>
 
