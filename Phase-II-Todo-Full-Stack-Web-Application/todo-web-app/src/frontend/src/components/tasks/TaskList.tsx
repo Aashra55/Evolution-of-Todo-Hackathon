@@ -14,14 +14,15 @@ interface TaskListProps {
 
 export default function TaskList({ tasks, onToggleComplete, onDelete }: TaskListProps) {
   return (
-    <div className="space-y-4">
-      {tasks.map((task) => (
-        <TaskItem
-          key={task.id}
-          task={task}
-          onToggleComplete={onToggleComplete}
-          onDelete={onDelete}
-        />
+    <div className="py-4" style={{ marginTop: '24px' }}>
+      {tasks.map((task, index) => (
+        <div key={task.id} style={{ marginTop: index > 0 ? '1rem' : '0' }}>
+          <TaskItem
+            task={task}
+            onToggleComplete={onToggleComplete}
+            onDelete={onDelete}
+          />
+        </div>
       ))}
     </div>
   );

@@ -52,6 +52,8 @@ export const fetchTasks = async () => {
     headers: getAuthHeaders(),
   });
   if (!response.ok) {
+    const errorBody = await response.text();
+    console.error('Failed to fetch tasks:', response.status, response.statusText, errorBody);
     throw new Error('Failed to fetch tasks');
   }
   return response.json();

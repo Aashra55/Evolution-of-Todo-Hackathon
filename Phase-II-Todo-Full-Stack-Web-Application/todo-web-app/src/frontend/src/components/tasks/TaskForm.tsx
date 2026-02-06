@@ -16,7 +16,7 @@ export default function TaskForm({ onCreateTask }: TaskFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-6 mb-6"> {/* Adjusted margin-bottom */}
+    <form onSubmit={handleSubmit} className="flex mb-10" style={{gap: '1.5rem'}}> {/* Adjusted margin-bottom */}
       <input
         type="text"
         value={description}
