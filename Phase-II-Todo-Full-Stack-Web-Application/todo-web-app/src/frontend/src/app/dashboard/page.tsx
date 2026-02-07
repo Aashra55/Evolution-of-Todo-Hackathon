@@ -1,8 +1,9 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+
 import { useEffect, useState } from 'react';
-import { logout, fetchTasks, createTask, updateTask, deleteTask } from '@/services/api';
+import { logout, fetchTasks, createTask, updateTask, deleteTask, isAuthenticated } from '@/services/api';
 import TaskList from '@/components/tasks/TaskList';
 import TaskForm from '@/components/tasks/TaskForm';
 import { FaSignOutAlt } from 'react-icons/fa'; // Import the icon
@@ -20,6 +21,11 @@ export default function Dashboard() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (!isAuthenticated()) {
+      router.push('/signin');
+      return; // Stop execution if not authenticated
+    }
+
     const getTasks = async () => {
       try {
         const fetchedTasks = await fetchTasks();
@@ -27,14 +33,12 @@ export default function Dashboard() {
       } catch (err) {
         setError('Failed to fetch tasks.');
         console.error('Failed to fetch tasks:', err);
-        // Optionally redirect to login if unauthorized
-        // router.push('/signin'); 
+        // The outer if-block handles redirection, so this is just for API errors.
       }
     };
 
     getTasks();
-  }, []);
-
+  }, [router]);
   const handleLogout = () => {
     logout();
     router.push('/signin');

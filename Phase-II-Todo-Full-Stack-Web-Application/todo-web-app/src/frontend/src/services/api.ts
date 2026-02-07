@@ -46,6 +46,10 @@ const getAuthHeaders = () => {
   };
 };
 
+export const isAuthenticated = (): boolean => {
+  return localStorage.getItem('token') !== null;
+};
+
 export const fetchTasks = async () => {
   const response = await fetch(`${API_BASE_URL}/tasks/`, {
     method: 'GET',
